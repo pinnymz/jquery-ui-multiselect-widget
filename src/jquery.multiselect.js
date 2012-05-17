@@ -39,7 +39,7 @@ $.widget("ech.multiselect", {
 		hide: '',
 		autoOpen: false,
 		multiple: true,
-		singleHeaderUnselect: false,
+		closeHeaderUnselect: false,
 		position: {}
 	},
 
@@ -277,7 +277,7 @@ $.widget("ech.multiselect", {
 			.delegate('a', 'click.multiselect', function( e ){
 				// close link
 				if( $(this).hasClass('ui-multiselect-close') ){
-					if (self.options.singleHeaderUnselect)
+					if (self.options.closeHeaderUnselect)
 					{
 						self["uncheckAll"]();
 					}
