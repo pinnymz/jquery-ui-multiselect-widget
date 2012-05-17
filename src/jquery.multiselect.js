@@ -81,7 +81,7 @@ $.widget("ech.multiselect", {
 						return '';
 					}
 				})
-				.append('<li class="ui-multiselect-close"><a href="#" class="ui-multiselect-close"><span class="ui-icon ui-icon-circle-close"></span></a>' + (this.options.closeHeaderUnselect ? '<span>' + o.uncheckAllText + '</span>' : '') + '</li>')
+				.append('<li' + (this.options.closeHeaderUnselect ? '' : ' class="ui-multiselect-close"') +'><a href="#" class="ui-multiselect-close"><span class="ui-icon ui-icon-circle-close"></span></a>' + (this.options.closeHeaderUnselect ? '<span>' + o.uncheckAllText + '</span>' : '') + '</li>')
 				.appendTo( header ),
 			
 			checkboxContainer = (this.checkboxContainer = $('<ul />'))
